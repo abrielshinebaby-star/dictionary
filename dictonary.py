@@ -11,3 +11,5 @@ for key in dictionary.keys():
     print(key)
 for value in dictionary.values():
     print(value)
+for key,value in dictionary.items():
+    print(key,value)
