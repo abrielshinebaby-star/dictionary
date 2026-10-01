@@ -9,16 +9,21 @@ alien=Actor("alien foto")
 alien.x=300
 alien.y=550
 
+message="Click on the alien"
+
 def draw():
     screen.fill("black")
     alien.draw()
-    screen.draw.text("you hit the alien",(300,0))
+    screen.draw.text(message,(300,0))
 
 def on_mouse_down(pos):
+    global message 
     if alien.collidepoint(pos):
         alien.x=random.randint(50,550)
         alien.y=random.randint(50,550)
-    
+        message="you hit the alien"
+    else:
+        message="you missed the alien"
 
 def update():
     pass
